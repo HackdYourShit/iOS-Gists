@@ -1,9 +1,9 @@
 extension UITableViewCell {
-	func removeSeparators() {
-		for subview in self.subviews where NSStringFromClass(subview.classForCoder) == "_UITableViewCellSeparatorView" {
-			subview.removeFromSuperview()
-		}
-	}
+  func removeSeparators() {
+    for subview in self.subviews where NSStringFromClass(subview.classForCoder) == "_UITableViewCellSeparatorView" {
+      subview.removeFromSuperview()
+    }
+  }
 }
 
 // Then in cell subclass
