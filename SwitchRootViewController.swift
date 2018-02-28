@@ -28,3 +28,13 @@ extension UIWindow {
 		}
 	}
 }
+
+extension UIView {
+
+    /// Removes all subviews from view
+    func removeAllSubviews() {
+		for view in self.subviews {
+			view.removeFromSuperview()
+		}
+	}
+}
