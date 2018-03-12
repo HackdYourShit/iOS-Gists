@@ -1,6 +1,7 @@
 @available(iOS 9.0, *)
 extension UINavigationItem {
-	func setTitle(title:String, subtitle:String) {
+	// TODO: Check if autolayout can be used instead of fixed width
+	func set(title:String, subtitle:String) {
 
 		let one = UILabel()
 		one.text = title
@@ -13,18 +14,14 @@ extension UINavigationItem {
 		two.textAlignment = .center
 		two.sizeToFit()
 
-
-
 		let stackView = UIStackView(arrangedSubviews: [one, two])
 		stackView.distribution = .equalCentering
 		stackView.axis = .vertical
 		stackView.alignment = .center
 
 		let width = max(one.frame.size.width, two.frame.size.width)
-		stackView.frame = CGRect(x: 0, y: 0, width: width, height: 35) 
-
-
-
+		stackView.frame = CGRect(x: 0, y: 0, width: width, height: 35)
+		
 		self.titleView = stackView
 	}
 }
